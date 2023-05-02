@@ -72,23 +72,6 @@ public class MovieManagerTest {
 
     }
 
-    @Test
-    public void shouldFindFirstAndLastMovies() {
-
-        manager.add("Movie1");
-        manager.add("Movie2");
-        manager.add("Movie3");
-        manager.add("Movie4");
-        manager.add("Movie5");
-
-        String[] actual = {"Movie1", "Movie5"};
-        String[] expected = {"Movie1", "Movie5"};
-
-        Assertions.assertArrayEquals(actual, expected);
-
-
-    }
-
 
     @Test
     public void shouldFindZeroMovies() {
