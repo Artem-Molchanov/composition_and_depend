@@ -39,23 +39,6 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void shouldNotFindLastMoviesOverLimit() {
-        MovieManager manager = new MovieManager(3);
-
-        manager.add("Movie1");
-        manager.add("Movie2");
-        manager.add("Movie3");
-        manager.add("Movie4");
-
-
-        String[] actual = {};
-        String[] expected = {};
-
-        Assertions.assertArrayEquals(actual, expected);
-    }
-
-
-    @Test
     public void shouldFindAllMovies() {
 
         manager.add("Movie1");
