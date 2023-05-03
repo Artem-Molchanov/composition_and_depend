@@ -37,6 +37,23 @@ public class MovieManagerTest {
 
         Assertions.assertArrayEquals(actual, expected);
     }
+    @Test
+    public void shouldFindLastMoviesOverLimit() {
+        MovieManager manager = new MovieManager(3);
+
+        manager.add("Movie1");
+        manager.add("Movie2");
+        manager.add("Movie3");
+        manager.add("Movie4");
+
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Movie4", "Movie3", "Movie2"};
+
+
+        Assertions.assertArrayEquals(actual, expected);
+    }
+
 
     @Test
     public void shouldFindAllMovies() {
